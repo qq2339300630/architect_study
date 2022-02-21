@@ -13,7 +13,7 @@ public class HiStackTraceUtil {
         for (int i = allDepth - 1; i >= 0; i--) {
             className = stackTrace[i].getClassName();
             if (ignorePacket != null && className.startsWith(ignorePacket)) {
-                ignoreDepth = i + 1;
+                ignoreDepth = i;
                 break;
             }
         }

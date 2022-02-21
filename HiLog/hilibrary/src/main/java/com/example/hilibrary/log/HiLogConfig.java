@@ -23,7 +23,7 @@ public abstract class HiLogConfig {
     }
 
     public int stackTraceDepth() {
-        return 5;
+        return 10;
     }
 
     public HiLogPrinter printers() {
