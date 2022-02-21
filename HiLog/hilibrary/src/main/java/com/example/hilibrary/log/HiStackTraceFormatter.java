@@ -12,7 +12,7 @@ public class HiStackTraceFormatter implements HiLogFormatter<StackTraceElement[]
             for (int i = 0; i < data.length; i++) {
                 if (i == 0) {
                     sb.append("stackTrace: \n");
-                } else if (i == data.length - 1) {
+                } else if (i != data.length - 1) {
                     sb.append("\t|-");
                     sb.append(data[i].toString());
                     sb.append("\n");

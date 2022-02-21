@@ -1,14 +1,18 @@
 package com.example.hilibrary.log;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class HiLog {
+
+    private static final String HI_LOG_PACKAGE;
+
+    static {
+        String className = HiLog.class.getName();
+        HI_LOG_PACKAGE = className.substring(0, className.lastIndexOf('.') + 1);
+    }
 
     public static void v(Object... contents) {
         log(HiLogType.V, contents);
@@ -76,10 +80,10 @@ public class HiLog {
             sb.append(threadInfo).append("\n");
         }
         if (config.stackTraceDepth() > 0) {
-            String stackTrace = HiLogConfig.Hi_Stack_Trace_Formatter.format(new Throwable().getStackTrace());
+            String stackTrace = HiLogConfig.Hi_Stack_Trace_Formatter.format(HiStackTraceUtil.getCroppedRealStackTrack(new Throwable().getStackTrace(), HI_LOG_PACKAGE, config.stackTraceDepth()));
             sb.append(stackTrace).append("\n");
         }
-        String body = parseBody(content);
+        String body = parseBody(content, config);
         sb.append(body);
         List<HiLogPrinter> printers = config.printers() != null ? Collections.singletonList(config.printers()) : HiLogManager.getInstance().printers;
         if (printers == null) return;
@@ -88,7 +92,11 @@ public class HiLog {
         }
     }
 
-    private static String parseBody(@NonNull Object[] contents) {
+    private static String parseBody(@NonNull Object[] contents, @NonNull HiLogConfig config) {
+        if (config.injectJsonParser() != null) {
+            return config.injectJsonParser().toJson(contents);
+        }
+
         StringBuilder sb = new StringBuilder();
         for (Object o : contents) {
             sb.append(o.toString()).append(";");
