@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "HiLog"
 include ':app'
 include ':hilibrary'
+include ':hiui'

@@ -68,7 +68,6 @@ public class HiViewPrintProvider {
             return;
         }
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ScreenUtil.dip2px(160));
-
         params.gravity = Gravity.BOTTOM;
         View logView = getLogView();
         logView.setTag(TAG_LOG_VIEW);

@@ -1,6 +1,5 @@
 package com.example.hilibrary.log;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HiViewPrinter implements HiLogPrinter {
-
 
     private RecyclerView recyclerView;
     private LogAdapter adapter;
