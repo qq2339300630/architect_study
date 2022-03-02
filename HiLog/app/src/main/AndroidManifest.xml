@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HiLog">
         <activity
-            android:name=".demo.HiRefreshDemoActivity"
+            android:name=".demo.refresh.HiRefreshDemoActivity"
             android:exported="false" />
         <activity
             android:name=".demo.HiLogDemoActivity"
