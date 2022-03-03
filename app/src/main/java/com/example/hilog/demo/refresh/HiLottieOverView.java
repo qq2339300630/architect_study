@@ -24,7 +24,7 @@ public class HiLottieOverView extends HiOverView {
 
     @Override
     protected void init() {
-        LayoutInflater.from(getContext()).inflate()
+        //LayoutInflater.from(getContext()).inflate()
     }
 
     @Override
