@@ -1,0 +1,4 @@
+com.example.hilibrary
+id message
+id tag
+layout hilog_item

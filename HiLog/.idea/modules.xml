@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/HiLog.iml" filepath="$PROJECT_DIR$/.idea/HiLog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HiLog.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HiLog.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hilibrary/HiLog.hilibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/hilibrary/HiLog.hilibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hiui/HiLog.hiui.iml" filepath="$PROJECT_DIR$/.idea/modules/hiui/HiLog.hiui.iml" />
+    </modules>
+  </component>
+</project>

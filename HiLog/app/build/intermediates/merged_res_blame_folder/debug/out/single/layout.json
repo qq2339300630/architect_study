@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/caojiajun/AndroidStudioProjects/architect_study/HiLog/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/caojiajun/AndroidStudioProjects/architect_study/HiLog/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/caojiajun/AndroidStudioProjects/architect_study/HiLog/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_hi_log_demo.xml",
+        "source": "/Users/caojiajun/AndroidStudioProjects/architect_study/HiLog/app/src/main/res/layout/activity_hi_log_demo.xml"
+    }
+]
